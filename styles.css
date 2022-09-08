@@ -1,0 +1,156 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+/* Using Heu for color selection in 360 degrees wheel  */
+:root{
+  --hue-neutral:200;
+  --hue-wrong: 0;
+  --hue-correct: 145;
+}
+
+body{
+  --hue: var(--hue-neutral);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct {
+  --hue: var(--hue-correct);
+}
+body.wrong{
+  --hue: var(--hue-wrong);
+}
+.copy{
+  color : #fff;
+}
+.header{
+  padding-top: 0;
+  text-align: center;
+  font-family: "Pacifico", sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;.
+  box-shadow: 0 0 10px 2px;
+}
+
+.fa-snake{
+  font-weight: 700;
+}
+.btn-grid{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+  border: 1px solid hsl(var(--hue), 100%, 30%);
+  background-color: hsl(var(--hue), 100%, 50%);
+  border-radius: 5px;
+  padding: 5px, 10px;
+  font-family: "oleo+script", sans-serif;
+  font-size: 20px;
+  color: white;
+  outline: none;
+}
+.btn:hover{
+  background-color: green;
+}
+
+
+.btn.correct{
+  --hue: var(--hue-correct);
+  color: black;
+}
+
+.btn.wrong{
+  --hue: var(--hue-wrong);
+
+}
+
+.start-btn, .next-btn{
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "oleo+script", sans-serif;
+  padding: 10px 20px;
+}
+
+p{
+  font-family: "oleo+script", sans-serif;;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.top-area{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.grid{
+  box-shadow: 0 0  10px 2px;
+  margin-top: 30px;
+  flex-direction: column;
+  border: 2px solid black;
+  background-color: white;
+  height: 300px;
+  width: 800px;
+  max-width: 80%;
+}
+.gate{
+  margin: 0;
+  padding: 30px;
+  height: 90px;
+  width: auto;
+  font-size: 20px;
+  font-family: "Oleo+script", sans-serif;
+  background-color: green;
+}
+
+.timer{
+  height: auto;
+  width: auto;
+  padding: 20px;
+  font-size: 50px;
+  font-weight: bold;
+  color: grey;
+  font-family: "Bangers", sans-serif;
+}
+.snake-area{
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: scale(0.6);
+}
+.head{
+  top: 0;
+  left: 0;
+}
+.body{
+  top: 0;
+}
